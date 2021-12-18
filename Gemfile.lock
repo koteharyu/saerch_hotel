@@ -103,6 +103,7 @@ GEM
     hpricot (0.8.6)
     html2slim (0.2.0)
       hpricot
+    httpclient (2.8.3)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.4)
@@ -290,6 +291,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   dotenv-rails
   html2slim
+  httpclient
   jbuilder (~> 2.7)
   line-bot-api
   listen (~> 3.3)
