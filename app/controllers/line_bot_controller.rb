@@ -2,7 +2,11 @@ class LineBotController < ApplicationController
   protect_from_forgery expect: %i[callback]
 
   def callback
-
+    body = request.body.read
+    signature = requrest.env['HTTP_X_LINE_SIGNATURE']
+    unless client.validate_signature(body, signature)
+      return head :bad_request
+    end
   end
 
   private
